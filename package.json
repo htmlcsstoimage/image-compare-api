@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "image-size": "^0.6.3",
+    "pixelmatch": "^4.0.2",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  }
+}
