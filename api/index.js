@@ -27,10 +27,14 @@ module.exports = async (req, res) => {
       image_size.width,
       image_size.height
     )
+
+    const percent_difference = (pixel_difference / (image_size["width"] * image_size["height"])) * 100.0
+
     const results = {
       image: image_size,
       other_image: other_image_size,
-      pixel_difference: pixel_difference
+      pixel_difference: pixel_difference,
+      percent_difference: Math.round(percent_difference * 10) / 10
     }
 
     res.end(JSON.stringify(results))
